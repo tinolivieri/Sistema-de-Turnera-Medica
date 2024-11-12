@@ -1,0 +1,11 @@
+2023-11-16 14:06:25.004557-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "    CREATE TABLE IF NOT EXISTS turnos(\000a        id INTEGER AUTO_INCREMENT PRIMARY KEY,\000a        doctor_id INTEGER,\000a        paciente_id INTEGER,\000a        fecha TIMESTAMP,\000a        FOREIGN KEY (doctor_id) REFERENCES doctores(id),\000a    [*])\000a"; se esperaba "identifier"
+Syntax error in SQL statement "    CREATE TABLE IF NOT EXISTS turnos(\000a        id INTEGER AUTO_INCREMENT PRIMARY KEY,\000a        doctor_id INTEGER,\000a        paciente_id INTEGER,\000a        fecha TIMESTAMP,\000a        FOREIGN KEY (doctor_id) REFERENCES doctores(id),\000a    [*])\000a"; expected "identifier"; SQL statement:
+    CREATE TABLE IF NOT EXISTS turnos(
+        id INTEGER AUTO_INCREMENT PRIMARY KEY,
+        doctor_id INTEGER,
+        paciente_id INTEGER,
+        fecha TIMESTAMP,
+        FOREIGN KEY (doctor_id) REFERENCES doctores(id),
+    )
+ [42001-224]
